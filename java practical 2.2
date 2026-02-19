@@ -1,0 +1,43 @@
+public class Result {
+    String name;
+    int m1, m2, m3;
+
+    public void setMarks(int a, int b, int c) {
+        m1 = a;
+        m2 = b;
+        m3 = c;
+    }
+
+    public void display() {
+        int total = m1 + m2 + m3;
+        double percentage = total / 3.0;
+
+        System.out.println("Name: " + name);
+        System.out.println("Marks: " + m1 + ", " + m2 + ", " + m3);
+        System.out.println("Total: " + total);
+        System.out.println("Percentage: " + percentage);
+    }
+
+    public static void main(String[] args) {
+        Result r1 = new Result();
+        Result r2 = new Result();
+        Result r3 = new Result();
+
+        r1.name = "sakshi";
+        r2.name = "tanvi";
+        r3.name = "sanskruti";
+
+        r1.setMarks(90, 89, 95);
+        r2.setMarks(79, 90, 80);
+        r3.setMarks(67, 98, 74);
+
+        System.out.println("\nDetails of Result 1:");
+        r1.display();
+
+        System.out.println("\nDetails of Result 2:");
+        r2.display();
+
+        System.out.println("\nDetails of Result 3:");
+        r3.display();
+    }
+}
