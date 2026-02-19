@@ -1,0 +1,46 @@
+public class book {
+    int bookId;
+    String author;
+    String title;
+    double price;
+
+    public void display() {
+        System.out.println("Book ID: " + bookId);
+        System.out.println("Author: " + author);
+        System.out.println("Title: " + title);
+        System.out.println("Price: " + price);
+    }
+
+    public static void main(String[] args) {
+        book b1 = new book();
+        book b2 = new book();
+        book b3 = new book();
+
+        // Book 1 details
+        b1.bookId = 1001;
+        b1.author = "Dale Carnegie";
+        b1.title = "How to Win Friends and Influence People";
+        b1.price = 1000.00;
+
+        // Book 2 details
+        b2.bookId = 1002;
+        b2.author = "Robert Kiyosaki";
+        b2.title = "Rich Dad Poor Dad";
+        b2.price = 750.00;
+
+        // Book 3 details
+        b3.bookId = 1003;
+        b3.author = "James Clear";
+        b3.title = "Atomic Habits";
+        b3.price = 650.00;
+
+        System.out.println("Details of Book 1:");
+        b1.display();
+
+        System.out.println("Details of Book 2:");
+        b2.display();
+
+        System.out.println("Details of Book 3:");
+        b3.display();
+    }
+}
