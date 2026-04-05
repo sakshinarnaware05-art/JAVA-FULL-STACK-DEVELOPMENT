@@ -1,1 +1,25 @@
+import java.util.*;
 
+public class Search {
+    public static void main(String[] args) {
+
+        int[] arr = {99, 7, 6, 1, 100, 108};
+        int n = arr.length;
+        int key = 1;
+
+        boolean found = false;
+
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == key) {
+                found = true;
+                break;
+            }
+        }
+
+        if (found) {
+            System.out.println("Element " + key + " is present in the array.");
+        } else {
+            System.out.println("Element " + key + " is not present in the array.");
+        }
+    }
+}
