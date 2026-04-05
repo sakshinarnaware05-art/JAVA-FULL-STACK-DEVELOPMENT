@@ -1,0 +1,56 @@
+class Book {
+    int bookId;
+    String title;
+    String author;
+
+    public Book(int n, String t, String a) {
+        bookId = n;
+        title = t;
+        author = a;
+    }
+
+    void showDetails() {
+        System.out.println("Book id: " + bookId);
+        System.out.println("Book Title: " + title);
+        System.out.println("Author name: " + author);
+    }
+}
+
+class IssuedBook extends Book {
+    String issueDate;
+    String returnDate;
+
+    public IssuedBook(int n, String t, String a, String i, String r) {
+        super(n, t, a);
+        issueDate = i;
+        returnDate = r;
+    }
+
+    @Override
+    void showDetails() {
+        super.showDetails();
+        System.out.println("Date of issue: " + issueDate);
+        System.out.println("Return date: " + returnDate);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Book b1 = new Book(1, "My Life Rules", "Sakshi");
+
+        IssuedBook b2 = new IssuedBook(
+                2,
+                "My Life Rules",
+                "Sakshi",
+                "02-02-26",
+                "05-01-26"
+        );
+
+        b1.showDetails();
+
+        System.out.println("\n****Show Details of Book****\n");
+
+        b2.showDetails();
+    }
+}
