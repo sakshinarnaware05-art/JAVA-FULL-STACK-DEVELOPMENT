@@ -1,0 +1,65 @@
+class Products {
+    int productId;
+    String productName;
+    float price;
+
+    public Products(int n, String p, float r) {
+        productId = n;
+        productName = p;
+        price = r;
+    }
+
+    void showDetails() {
+        System.out.println("Id of product: " + productId);
+        System.out.println("Name of product: " + productName);
+        System.out.println("Price of product: " + price);
+    }
+}
+
+class Electronics extends Products {
+    int warrantyPeriod;
+
+    public Electronics(int n, String p, float r, int e) {
+        super(n, p, r);
+        warrantyPeriod = e;
+    }
+
+    @Override
+    void showDetails() {
+        super.showDetails();
+        System.out.println("Warranty Period: " + warrantyPeriod + " months");
+    }
+}
+
+class Clothing extends Products {
+    int size;
+    String fabric;
+
+    public Clothing(int n, String p, float r, int s, String f) {
+        super(n, p, r);
+        size = s;
+        fabric = f;
+    }
+
+    @Override
+    void showDetails() {
+        super.showDetails();
+        System.out.println("Size: " + size);
+        System.out.println("Fabric: " + fabric);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Electronics tv = new Electronics(101, "Smart TV", 99999.99f, 24);
+        System.out.println("--- Electronics Details ---");
+        tv.showDetails();
+
+        System.out.println();
+
+        Clothing shirt = new Clothing(201, "T-Shirt", 2555.50f, 40, "Cotton");
+        System.out.println("--- Clothing Details ---");
+        shirt.showDetails();
+    }
+}
